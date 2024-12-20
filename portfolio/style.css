@@ -1,12 +1,22 @@
 /* PC・SP共通 */
 
 body {
-  font-family: "Noto Sans JP", "Lexend", sans-serif;
-}
-p {
-  font-size: 14px;
+  font-family: "Poppins", "Noto Sans JP", sans-serif;
 }
 
+p {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*================
+ PC用のスタイル
+=================*/
 @media screen and (min-width: 768px) {
 
   /* 横幅設定 */
@@ -18,28 +28,41 @@ p {
 
   /* フォントh1〜h6設定 */
   h1 {
-    font-family: "Lexend", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 80px;
   }
+
   h2 {
-    font-family: "Lexend", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 64px;
   }
+
   h3 {
-    font-family: "Lexend", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
     font-size: 40px;
-    text-align: center;
   }
+
   h4 {
-    font-family: "Lexend", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 28px;
   }
+
   h6 {
-    font-family: "Lexend", sans-serif;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
     font-size: 14px;
   }
 
-  
+
 
 
   /* ヘッダー */
@@ -47,139 +70,394 @@ p {
     background-color: #333333;
     height: 90px;
     display: flex;
-    justify-content: space-between;
+    position: relative;
   }
+
   #pc-header-title {
     color: white;
     text-decoration: none;
-    margin-top: 33px;
-    margin-left: 40px;
+    position: absolute;
+    top: 50%;
+    left: 40px;
+    translate: 0 -50%;
+  }
+
+  #nav-pc {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    right: 1%;
+    translate: 0 -50%;
   }
 
   /* ナビゲーションのリンクの装飾設定 */
-  #header-webdesign {
+  .nav-pc-content {
     height: 19px;
-    margin-top: 36px;
     margin-right: 30px;
-    
-  }
-  #header-artdirection {
-    height: 19px;
-    margin-top: 36px;
-    margin-right: 30px;
-  }
-  #header-graphic {
-    height: 19px;
-    margin-top: 36px;
-    margin-right: 30px;
-  }
-  #header-coding {
-    height: 19px;
-    margin-top: 36px;
-    margin-right: 30px;
-  }
-  #header-illustration {
-    height: 19px;
-    margin-top: 36px;
-    margin-right: 30px;
-  }
-  #header-fabric {
-    height: 19px;
-    margin-top: 36px;
-    margin-right: 56px;
   }
 
-  /* メインビジュアル*/
-#fv {
-  position: relative;
-}
-#main-visual {
-  text-align: center;
-  object-fit: cover;
-  width: 100vw;
-  height: 510px;
-}
-#title {
-  text-align: center;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-}
-#fv-title {
-  margin-top: 160px;
-  margin-bottom:8px;
-}
-#scroll {
-  width: 60px;
-  height: 90px;
-  position: absolute;
-  right: 80px;
-  bottom: 40px;
+  #fv {
+    position: relative;
+  }
+
+  #title {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  #title>h3 {
+    margin-top: 16px;
+  }
+
+
+  #scroll {
+    position: absolute;
+    top: 70%;
+    right: 5%;
+    translate: -50% -50%;
+    width: 5%;
+  }
+
+  /* WORKS */
+  #top-works {
+    text-align: center;
+    margin: 120px 80px 120px 80px;
+  }
+
+  #top-works>h3 {
+    margin-bottom: 80px;
+  }
+
+  /* flexの場合
+  .works-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  } */
+
+  .pc-works-flex {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px 40px;
+  }
+
+  .sp-works-flex {
+    display: none;
+  }
+
+
+  .works {
+    width: 100%;
+  }
+
+  /* SKILL */
+  #skill {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 120px;
+  }
+
+  #skill>h3 {
+    margin-bottom: 80px;
+  }
+
+  .skill-flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .skill-content {
+    display: flex;
+    margin-bottom: 24px;
+    width: 500px;
+  }
+
+  .skill-mark {
+    width: 168px;
+    height: 168px;
+  }
+
+  .skill-text {
+    width: 354px;
+  }
+
+  /*about*/
+  .about-section {
+    position: relative;
+    background-image: url(images/top/top_about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #about-img {
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+
+  }
+
+  #about {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    justify-content: center;
+  }
+
+  #about-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  #about-title>h4 {
+    margin-right: 8px;
+  }
+
+  #about-content {
+    display: flex;
+  }
+
+  #about-me {
+    width: 40%;
+    margin-right: 40px;
+  }
+
+  /*contact*/
+  #contact {
+    position: relative;
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+ #sp-contact {
+    display: none;
+  }
+
+  /*footer*/
+  footer {
+    background-color: #333333;
+    height: 48px;
+    position: relative;
+  }
+
+  #copyright {
+    color: white;
+    font-size: 12px;
+    margin-left: 3%;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+  }
+
 }
 
-/* WORKS */
-#top-works {
-  text-align: center;
-  margin-top: 80px;
-  margin-bottom: 40px;
-}
-#works-flex {
-  text-align: center;
-  display: flex;
-}
-#top-webdesign {
-  width: 305px;
-  height: 509px;
-  margin-bottom: 40px;
-}
-#top-artdirection {
-  width: 305px;
-  height: 509px;
-  margin-left: 80px;
-  margin-right: 80px;
-  margin-bottom: 40px;
-}
-#top-graphic {
-  width: 305px;
-  height: 509px;
-  margin-bottom: 40px;
-}
-#top-coding {
-  width: 305px;
-  height: 509px;
-}
-#top-illustration {
-  width: 305px;
-  height: 509px;
-  margin-left: 80px;
-  margin-right: 80px;
-}
-#top-fabric {
-  width: 305px;
-  height: 509px;
-}
+/*====================
+ スマートフォン用のスタイル
+=====================*/
+@media screen and (max-width: 767px) {
 
-/* SKILL */
-#skill {
-  text-align: center;
-}
-.skill-flex {
-  display: flex;
-  text-align: center;
-}
-.skill-content {
-  display: flex;
-  margin-bottom: 24px;
-}
-.skill-mark {
-  width: 168px;
-  height: 168px;
-}
-.skill-text {
-  width: 354px;
-}
+  /* PC用ナビゲーション非表示 */
+  #nav-pc {
+    display: none;
+  }
+
+  #pc-header-title {
+    display: none;
+  }
+
+  /* ハンバーガーメニュー */
+  #menu-sp {
+    width: 8%;
+    top: 32px;
+    right: 24px;
+  }
+
+  h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 56px;
+    margin-top: 80px;
+    /* 上のマージンを0に */
+    margin-bottom: 0;
+    /* 下のマージンを0に */
+  }
+
+  h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 32px;
+  }
+
+  #main-visual {
+    position: relative;
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+    height: 510px;
+  }
+
+  #title>h3 {
+    margin-top: 0;
+    /* 上のマージンを0に */
+    margin-bottom: 0;
+    /* 下のマージンを0に */
+  }
+
+  #title {
+    text-align: center;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  #scroll {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    translate: -50% -50%;
+    width: 15%;
+  }
+
+   /* WORKS */
+   #top-works {
+    text-align: center;
+    margin: 80px 12px 80px 12px;
+  }
+
+  #top-works>h3 {
+    margin-bottom: 40px;
+  }
+
+  .pc-works-flex {
+    display: none;
+  }
+
+  .sp-works-flex {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 15px;
+  }
+
+  /* SKILL */
+  #skill {
+    text-align: center;
+    margin: 80px 12px 80px 12px;
+  }
+
+  #skill>h3 {
+    margin-bottom: 40px;
+  }
+
+  .skill-flex {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .skill-content {
+    display: flex;
+    margin-bottom: 24px;
+  }
+
+  .skill-mark {
+    width: 120px;
+    height: 120px;
+    margin-right: 16px;
+  }
+
+  .skill-text {
+    width: 215px;
+  }
+
+  /*about*/
+  .about-section {
+    position: relative;
+    background-image: url(images/top/top_about.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  #about-img {
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+    height: 720px;
+  }
+
+  #about {
+    position: absolute;
+    justify-content: center;
+    top: 64px;
+  }
+
+  #about-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+
+  #about-title>h4 {
+    margin-right: 8px;
+  }
+
+  #about-content {
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #about-me {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  /*contact*/
+  #contact {
+    display: none;
+  }
+
+  #sp-contact {
+    position: relative;
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /*footer*/
+  footer {
+    background-color: #333333;
+    height: 48px;
+    position: relative;
+  }
+
+  #copyright {
+    color: white;
+    font-size: 12px;
+    margin-left: 3%;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+  }
 
 }

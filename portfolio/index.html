@@ -6,6 +6,16 @@
   <meta name="description" content="ポートフォリオ">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+    <!-- reset.css destyle -->
+<link
+rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+/>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,21 +25,20 @@
     <!-- PC用ナビゲーション -->
     <a id="pc-header-title" href="index.html">PORTFOLIO OKAMOTO ERIKO</a>
     <nav id="nav-pc">
-      <a href="webdesign.html"><img id="header-webdesign" src="images/header/header_webdesign.png"
+      <a href="webdesign.html"><img class="nav-pc-content" id="nav-webdesign" src="images/header/header_webdesign.png"
           alt="ウェブデザインページへ遷移"></a>
-      <a href="artdirection.html"><img id="header-artdirection" src="images/header/header_artdirection.png"
+      <a href="artdirection.html"><img class="nav-pc-content" id="nav-artdirection" src="images/header/header_artdirection.png"
           alt="アートディレクションページへ遷移"></a>
-      <a href="graphic.html"><img id="header-graphic" src="images/header/header_graphic.png" alt="グラフィックページへ遷移"></a>
-      <a href="cording.html"><img id="header-coding" src="images/header/header_coding.png" alt="コーディングページへ遷移"></a>
-      <a href="illustration.html"><img id="header-illustration" src="images/header/header_illustration.png"
+      <a href="graphic.html"><img class="nav-pc-content" id="nav-graphic" src="images/header/header_graphic.png" alt="グラフィックページへ遷移"></a>
+      <a href="cording.html"><img class="nav-pc-content" id="nav-coding" src="images/header/header_coding.png" alt="コーディングページへ遷移"></a>
+      <a href="illustration.html"><img class="nav-pc-content" id="nav-illustration" src="images/header/header_illustration.png"
           alt="イラストページへ遷移"></a>
-      <a href="fabric.html"><img id="header-fabric" src="images/header/header_fabric.png" alt="ファブリックデザインページへ遷移"></a>
+      <a href="fabric.html"><img class="nav-pc-content" id="nav-fabric" src="images/header/header_fabric.png" alt="ファブリックデザインページへ遷移"></a>
     </nav>
 
-    <!-- スマホ用メニューボタン 
-    <img id="menu-sp" src="images/button-menu.png" alt="ナビゲーションを開く"
+    <!-- スマホ用メニューボタン  -->
+    <img id="menu-sp" src="images/top/button-menu.png" alt="ナビゲーションを開く"
       onclick="document.getElementById('nav-sp').style.display = 'block'">
-    -->
     <!-- スマホ用ナビゲーション 
     <nav id="nav-sp">
       <img id="close" src="images/button-close.png" alt="ナビゲーションを閉じる"
@@ -42,8 +51,8 @@
       <a class="menu" href="cording.html" onclick="document.getElementById('nav-sp').style.display = 'none'"><img id="" src="" alt="コーディングページへ遷移"></a>
       <a class="menu" href="illustration.html" onclick="document.getElementById('nav-sp').style.display = 'none'"><img id="" src="" alt="イラストページへ遷移"></a>
       <a class="menu" href="fabric.html" onclick="document.getElementById('nav-sp').style.display = 'none'"><img id="" src="" alt="ファブリックデザインページへ遷移"></a>
-      -->
     </nav>
+     -->
 
   </header>
 
@@ -53,30 +62,48 @@
       <div id="fv">
         <img id="main-visual" src="images/top/top_fv.jpg">
         <div id="title">
-          <h1 id="fv-title">PORTFOLIO</h1>
-          <h3 id="fv-name">OKAMOTO ERIKO</h3>
+          <h1>PORTFOLIO</h1>
+          <h3>OKAMOTO ERIKO</h3>
         </div>
-        <a id="scroll" href="index.html/#top-works"><img src="images/top/fv_scroll.png" alt="worksへ"></a>
+        <figure>
+          <img id="scroll" src="images/top/fv_scroll.png" alt="worksへ">
+        </figure>
       </div>
       <!-- 実績 WORKS -->
       <section id="top-works">
         <h3>WORKS</h3>
-        <div class="works-flex">
-          <a href="webdesign.himl"><img id="top-webdesign" src="images/top/top_webdesign.jpg" alt="ウェブデザインページへ遷移"></a>
-          <a href="artdirection.html"><img id="top-artdirection" src="images/top/top_artdirection.jpg"
+        <div class="pc-works-flex">
+          <a href="webdesign.himl"><img class="works" id="top-webdesign" src="images/top/top_webdesign.jpg"
+              alt="ウェブデザインページへ遷移"></a>
+          <a href="artdirection.html"><img class="works" id="top-artdirection" src="images/top/top_artdirection.jpg"
               alt="アートディレクションページへ遷移"></a>
-          <a href="graphic.html"><img id="top-graphic" src="images/top/top_graphic.jpg" alt="グラフィックページへ遷移"></a>
-        </div>
-        <div class="works-flex">
-          <a href="cording.html"><img id="top-coding" src="images/top/top_coding.jpg" alt="コーディングページへ遷移"></a>
-          <a href="illustration.html"><img id="top-illustration" src="images/top/top_illustration.jpg"
+          <a href="graphic.html"><img class="works" id="top-graphic" src="images/top/top_graphic.jpg"
+              alt="グラフィックページへ遷移"></a>
+          <a href="cording.html"><img class="works" id="top-coding" src="images/top/top_coding.jpg"
+              alt="コーディングページへ遷移"></a>
+          <a href="illustration.html"><img class="works" id="top-illustration" src="images/top/top_illustration.jpg"
               alt="イラストページへ遷移"></a>
-          <a href="fabric.html"><img id="top-fabric" src="images/top/top_fabric.jpg" alt="ファブリックデザインページへ遷移"></a>
+          <a href="fabric.html"><img class="works" id="top-fabric" src="images/top/top_fabric.jpg"
+              alt="ファブリックデザインページへ遷移"></a>
+        </div>
+        <div class="sp-works-flex">
+          <a href="webdesign.himl"><img class="sp-works" id="top-webdesign" src="images/top/sp_top_webdesign.jpg"
+            alt="ウェブデザインページへ遷移"></a>
+        <a href="artdirection.html"><img class="sp-works" id="top-artdirection" src="images/top/sp_top_artdirection.jpg"
+            alt="アートディレクションページへ遷移"></a>
+        <a href="graphic.html"><img class="sp-works" id="top-graphic" src="images/top/sp_top_graphic.jpg"
+            alt="グラフィックページへ遷移"></a>
+        <a href="cording.html"><img class="sp-works" id="top-coding" src="images/top/sp_top_coding.jpg"
+            alt="コーディングページへ遷移"></a>
+        <a href="illustration.html"><img class="sp-works" id="top-illustration" src="images/top/sp_top_illustration.jpg"
+            alt="イラストページへ遷移"></a>
+        <a href="fabric.html"><img class="sp-works" id="top-fabric" src="images/top/sp_top_fabric.jpg"
+            alt="ファブリックデザインページへ遷移"></a>
         </div>
       </section>
 
       <!-- スキル SKILL -->
-       <section id="skill">
+      <section id="skill">
         <h3>SKILL</h3>
         <div class="skill-flex">
           <div class="skill-content">
@@ -87,8 +114,6 @@
             <img class="skill-mark" src="images/skill/skill_fi.jpg" alt="xdのスキル">
             <p class="skill-text">テキスト入ります</p>
           </div>
-        </div>
-        <div class="skill-flex">
           <div class="skill-content">
             <img class="skill-mark" src="images/skill/skill_ai.jpg" alt="xdのスキル">
             <p class="skill-text">テキスト入ります</p>
@@ -97,8 +122,6 @@
             <img class="skill-mark" src="images/skill/skill_ps.jpg" alt="xdのスキル">
             <p class="skill-text">テキスト入ります</p>
           </div>
-        </div>
-        <div class="skill-flex">
           <div class="skill-content">
             <img class="skill-mark" src="images/skill/skill_htmlcss.jpg" alt="xdのスキル">
             <p class="skill-text">テキスト入ります</p>
@@ -107,8 +130,6 @@
             <img class="skill-mark" src="images/skill/skill_wp.jpg" alt="xdのスキル">
             <p class="skill-text">テキスト入ります</p>
           </div>
-        </div>
-        <div class="skill-flex">
           <div class="skill-content">
             <img class="skill-mark" src="images/skill/skill_js.jpg" alt="xdのスキル">
             <p class="skill-text">テキスト入ります</p>
@@ -118,9 +139,33 @@
             <p class="skill-text">テキスト入ります</p>
           </div>
         </div>
-       </section>
+      </section>
 
+      <!-- about -->
+      <section class="about-section">
+        <img id="about-img" src="images/top/top_about.jpg">
+        <div id="about">
+          <div id="about-title">
+            <h4>about</h4>
+            <h3>OKAMOTO ERIKO</h3>
+          </div>
+          <div id="about-content">
+            <img id="about-me" src="images/top/top_profile.jpg">
+            <p id="about-text">東京在住。
+              WEBデザイン、コーディング、撮影ディレクション、紙媒体デザイン、イラストなどあらゆるモノづくりを経験。
+              アパレル業界で販促物を作っていたため、洗練されたバランスのデザインが得意です。また、あらゆる経験があるので、一貫してWEB制作を承ることが可能です。</p>
+          </div>
+        </div>
+      </section>
+      <!-- contact -->
+      <section>
+        <a href="webdesign.himl"><img id="contact" src="images/top/top_contact.jpg" alt="メールを送る"></a>
+        <a href="webdesign.himl"><img id="pc-contact" src="images/top/sp_top_contact.jpg" alt="メールを送る"></a>
+      </section>
     </div>
+    <footer>
+      <span id="copyright">&copy;2025 PORTFOLIO OKAMOTO ERIKO</span>
+    </footer>
 
   </main>
 
