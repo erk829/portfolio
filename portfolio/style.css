@@ -590,12 +590,7 @@ img {
     bottom: 80px;
   }
 
-  .workpage-subtitle {
-    margin-top: 80px;
-    text-align: center;
-  }
-
-  .workpage-subtitle {
+  .page-subtitle {
     margin-top: 120px;
     text-align: center;
   }
