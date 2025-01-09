@@ -13,76 +13,48 @@
     rel="stylesheet">
   <!-- reset.css destyle -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/work.css">
 </head>
 
 <body>
-  <header id="header">
+  <header>
+    <nav class="header-wrap">
+      <div class="header-logo">
+        <a href="#">
+          <picture>
+            <img loading="eager" src="./images/header/header_logo.png" width="260" height="260" alt="Logo" />
+          </picture>
+        </a>
+      </div>
+      <ul class="header-menu">
+        <li><a href="webdesign.html">WEB DESIGN</a></li>
+        <li><a href="artdirection.html">ART DIRECTION</a></li>
+        <li><a href="graphic.html">GRAPHIC</a></li>
+        <li><a href="cording.html">CODING</a></li>
+        <li><a href="illustration.html">ILLUSTRATION</a></li>
+        <li><a href="fabric.html">FABRIC PATTERN</a></li>
+      </ul>
 
-    <!-- PC用ナビゲーション -->
-    <a id="pc-header-title" href="index.html">PORTFOLIO OKAMOTO ERIKO</a>
-    <nav id="nav-pc">
-      <a href="webdesign.html"><img class="nav-pc-content" id="nav-webdesign" src="images/header/header_webdesign.png"
-          alt="ウェブデザインページへ遷移"></a>
-      <a href="artdirection.html"><img class="nav-pc-content" id="nav-artdirection"
-          src="images/header/header_artdirection.png" alt="アートディレクションページへ遷移"></a>
-      <a href="graphic.html"><img class="nav-pc-content" id="nav-graphic" src="images/header/header_graphic.png"
-          alt="グラフィックページへ遷移"></a>
-      <a href="cording.html"><img class="nav-pc-content" id="nav-coding" src="images/header/header_coding.png"
-          alt="コーディングページへ遷移"></a>
-      <a href="illustration.html"><img class="nav-pc-content" id="nav-illustration"
-          src="images/header/header_illustration.png" alt="イラストページへ遷移"></a>
-      <a href="fabric.html"><img class="nav-pc-content" id="nav-fabric" src="images/header/header_fabric.png"
-          alt="ファブリックデザインページへ遷移"></a>
+      <nav class="header-sp-menu">
+        <input type="checkbox" id="sp-menu-check" />
+        <div class="header-sp-menu-back"></div>
+        <label for="sp-menu-check" class="sp-menu-area">
+          <div class="sp-menu-icon">
+            <img src="images/header/sp-menu.png">
+          </div>
+        </label>
+        <ul class="sp-menu">
+          <li><a href="webdesign.html">WEB DESIGN</a></li>
+          <li><a href="artdirection.html">ART DIRECTION</a></li>
+          <li><a href="graphic.html">GRAPHIC</a></li>
+          <li><a href="cording.html">CODING</a></li>
+          <li><a href="illustration.html">ILLUSTRATION</a></li>
+          <li><a href="fabric.html">FABRIC PATTERN</a></li>
+        </ul>
+      </nav>
     </nav>
-
-    <!-- スマホ用メニューボタン  -->
-    <h4 id="sp-header-title" href="index.html">PORTFOLIO OKAMOTO ERIKO</h4>
-    <img id="menu-sp" src="images/top/button-menu.png" alt="ナビゲーションを開く"
-      onclick="document.getElementById('nav-sp').style.display = 'block'">
-    <!-- スマホ用ナビゲーション  
-    <nav id="nav-sp">
-      <img id="close" src="images/button-close.png" alt="ナビゲーションを閉じる"
-        onclick="document.getElementById('nav-sp').style.display = 'none'">
-      <title id="sp-header-title" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        PORTFOLIO OKAMOTO ERIKO</title>
-      <a class="sp-menu" href="webdesign.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_webdesign.jpg" alt="ウェブデザインページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>WEB DESIGN</h6>
-      </a>
-      <a class="sp-menu" href="artdirection.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_artdirection.jpg" alt="アートディレクションページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>ART DIRECTION</h6>
-      </a>
-      <a class="sp-menu" href="graphic.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_graphic.jpg" alt="グラフィックページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>GRAPHIC</h6>
-      </a>
-      <a class="sp-menu" href="cording.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_coding.jpg" alt="コーディングページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>CODING</h6>
-      </a>
-      <a class="sp-menu" href="illustration.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_illustration.jpg" alt="イラストページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>ILLUSTRATION</h6>
-      </a>
-      <a class="sp-menu" href="fabric.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_fabric.jpg" alt="ファブリックデザインページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>FABRIC</h6>
-      </a>
-    </nav>-->
+  </header>
 
   </header>
 
@@ -90,28 +62,30 @@
     <main>
       <div>
         <!-- FV -->
-        <div id="webdesign-fv">
+        <div class="fv">
           <picture id="page-mv">
             <source media="(max-width: 767px)" srcset="images/work/sp-work-mv.jpg">
             <img src="images/work/work-mv.jpg" alt="workページメインビジュアル">
           </picture>
           <div class="page-title">
-            <h3>WEB DESIGN</h3>
+            <h1>WEB DESIGN</h1>
           </div>
         </div>
         <!-- corprate site -->
-        <section class="cs-sec">
-          <h4 class="page-subtitle">
+        <section>
+          <h2 class="page-subtitle">
             CORPORATE SITE
-          </h4>
+          </h2>
           <!-- 昭文社 -->
           <div class="webdesign-item">
-            <img class="webdesign-item-img" src="images/work/shobunsha.jpg">
+            <figure class="webdesign-item-img">
+              <img src="images/work/shobunsha.jpg">
+            </figure>
             <div class="webdesign-item-text">
-              <h4 class="webdesign-item-title">昭文社</h4>
+              <h3 class="webdesign-item-title">昭文社</h3>
               <p class="webdesign-item-detail">株式会社昭文社<br>地図・旅行情報等を基にしたメディア企画・編集・制作などを展開していく会社</p>
-              <h5 class="webdesign-item-subtitle">DESIGN</h5>
-              <p class="webdesign-item-text">
+              <h4 class="webdesign-item-subtitle">DESIGN</h4>
+              <p class="webdesign-item-explanation">
                 マップルなどのポップで明るい印象と、老舗感ももちろん、まだまだ時代の先端をいく今っぽさもほしいとの要望があり、ミニマムなグラフィカルで現代感を感じさせ、色合いは基本の色を5色と多めでポップになりがちですが、薄いライトグレーを混ぜたような落ち着きのあるトーンでまとめ、信頼感も損なわないようなデザインを目指しました。地域の良さを引き立てることが強みの出版社ですので、建物や自然・車をオリジナルのグラフィックで表現しました。
                 昭文社様から見たクライアントが車、地域を活性化する方法（昭文社様）が道、といった意味を持たせています。</p>
               <p class="webdesign-item-period">制作期間 2023年5月〜8月</p>
@@ -123,16 +97,18 @@
           </div>
           <!-- TheSEED -->
           <div class="webdesign-item">
-            <img class="webdesign-item-img" src="images/work/seed.jpg">
+            <figure class="webdesign-item-img">
+              <img src="images/work/seed.jpg">
+            </figure>
             <div class="webdesign-item-text">
-              <h4 class="webdesign-item-title">The SEED</h4>
+              <h3 class="webdesign-item-title">The SEED</h3>
               <p class="webdesign-item-detail">株式会社シード<br>靴の製造から小売までのビジネスを展開するグループ会社</p>
-              <h5 class="webdesign-item-subtitle">DESIGN</h5>
-              <p class="webdesign-item-text">
+              <h4 class="webdesign-item-subtitle">DESIGN</h4>
+              <p class="webdesign-item-explanation">
                 クライアントとディレクターと毎週定例を行い、デザインの方向性などを明確にして作業していきました。FVを会社のある静岡でモデル撮影したいとのことだったので、静岡でのロケ地探し、ロケハン、スタッフやモデルの選定を行い、撮影ディレクション、写真セレクトも行いました。
                 デザイン自体はベースを白で、2色のベージュとコーポレートカラーを少しデザインに使いやすく調整したネイビーをアクセントに使用したフラットデザインにして、動きは少ないですが、落ち着きのある洗練された印象を狙いました。
               </p>
-              <p class="webdesign-item-period">制作期間 2022年11月〜2023年3月</p>
+              <p class="webdesign-item-period">制作期間 2023年5月〜8月</p>
               <div class="work-link">
                 <p>https://theseed.co.jp/</p>
                 <a class="link-button" href="https://theseed.co.jp/"><img src="images/work/button-link.png"></a>
@@ -141,12 +117,14 @@
           </div>
           <!-- MVM -->
           <div class="webdesign-item">
-            <img class="webdesign-item-img" src="images/work/mvm.jpg">
+            <figure class="webdesign-item-img">
+              <img src="images/work/mvm.jpg">
+            </figure>
             <div class="webdesign-item-text">
-              <h4 class="webdesign-item-title">MVM</h4>
+              <h3 class="webdesign-item-title">MVM</h3>
               <p class="webdesign-item-detail">エム・ヴイ・エム商事株式会社<br>りんごの自動販売機など農産物を幅広く展開する会社</p>
-              <h5 class="webdesign-item-subtitle">DESIGN</h5>
-              <p class="webdesign-item-text">
+              <h4 class="webdesign-item-subtitle">DESIGN</h4>
+              <p class="webdesign-item-explanation">
                 食品関係で国内外で幅広く事業を展開していて、今回は主にBtoBのためのサイトへリニューアルするとのことだったので、信頼感をデザインの核として整頓されたコンテンツとわかりやすい導線を心がけました。
                 ページ数が多いことやメイン商品のキャラクターを募集するなど、時間はかかりましたが、内容の濃いサイトに仕上がったと思います。
                 随所に出てくるグラフィカルなイラストもIllustratorで作成し、全体的に楽しげで明るい食卓をイメージさせるようなコーポレートサイトを目指しました。</p>
@@ -159,14 +137,16 @@
           </div>
           <!-- e.m. -->
           <div class="webdesign-item">
-            <img class="webdesign-item-img" src="images/work/em.jpg">
+            <figure class="webdesign-item-img">
+              <img src="images/work/em.jpg">
+            </figure>
             <div class="webdesign-item-text">
-              <h4 class="webdesign-item-title">e.m.</h4>
+              <h3 class="webdesign-item-title">e.m.</h3>
               <p class="webdesign-item-detail">イー・エム・デザイン株式会社<br>アクセサリーの企画、製造、卸し</p>
-              <h5 class="webdesign-item-subtitle">DESIGN</h5>
-              <p class="webdesign-item-text">
+              <h4 class="webdesign-item-subtitle">DESIGN</h4>
+              <p class="webdesign-item-explanation">
                 テキスト入ります</p>
-              <p class="webdesign-item-period">制作期間 </p>
+              <p class="webdesign-item-period">制作期間 2023年5月〜8月</p>
               <div class="work-link">
                 <p>https://em-grp-company.com/</p>
                 <a class="link-button" href="https://em-grp-company.com/"><img src="images/work/button-link.png"></a>
@@ -175,14 +155,18 @@
           </div>
           <!-- FANCOMI -->
           <div class="webdesign-item">
-            <img class="webdesign-item-img" src="images/work/fancomi.jpg">
+            <figure class="webdesign-item-img">
+              <img src="images/work/fancomi.jpg">
+            </figure>
             <div class="webdesign-item-text">
-              <h4 class="webdesign-item-title">FANCOMI</h4>
+              <h3 class="webdesign-item-title">FANCOMI</h3>
               <p class="webdesign-item-detail">ファンコミニケーションズ株式会社<br>会社説明入ります</p>
-              <h5 class="webdesign-item-subtitle">DESIGN</h5>
-              <p class="webdesign-item-text">
-                テキスト入ります</p>
-              <p class="webdesign-item-period">制作期間 </p>
+              <h4 class="webdesign-item-subtitle">DESIGN</h4>
+              <p class="webdesign-item-explanation">
+                クライアントとディレクターと毎週定例を行い、デザインの方向性などを明確にして作業していきました。FVを会社のある静岡でモデル撮影したいとのことだったので、静岡でのロケ地探し、ロケハン、スタッフやモデルの選定を行い、撮影ディレクション、写真セレクトも行いました。
+                デザイン自体はベースを白で、2色のベージュとコーポレートカラーを少しデザインに使いやすく調整したネイビーをアクセントに使用したフラットデザインにして、動きは少ないですが、落ち着きのある洗練された印象を狙いました。
+              </p>
+              <p class="webdesign-item-period">制作期間 2023年5月〜8月</p>
               <div class="work-link">
                 <p>https://www.fancs.com/</p>
                 <a class="link-button" href="https://www.fancs.com/"><img src="images/work/button-link.png"></a>
@@ -191,42 +175,63 @@
           </div>
           <!-- GRA -->
           <div class="webdesign-item">
-            <img class="webdesign-item-img" src="images/work/gra.jpg">
+            <figure class="webdesign-item-img">
+              <img src="images/work/gra.jpg">
+            </figure>
             <div class="webdesign-item-text">
-              <h4 class="webdesign-item-title">GRA</h4>
+              <h3 class="webdesign-item-title">GRA</h3>
               <p class="webdesign-item-detail">GRA株式会社<br>会社説明入ります</p>
-              <h5 class="webdesign-item-subtitle">DESIGN</h5>
-              <p class="webdesign-item-text">
+              <h4 class="webdesign-item-subtitle">DESIGN</h4>
+              <p class="webdesign-item-explanation">
                 テキスト入ります</p>
-              <p class="webdesign-item-period">制作期間 </p>
+              <p class="webdesign-item-period">制作期間 2023年5月〜8月</p>
               <div class="work-link">
-                <p></p>
+                <p>https://www.fancs.com/</p>
                 <a class="link-button" href="https://www.fancs.com/"><img src="images/work/button-link.png"></a>
               </div>
             </div>
           </div>
           <!-- landing page -->
-        <section class="cs-sec">
-          <h4 class="workpage-subtitle">
-            LANDING PAGE
-          </h4>
-          <!-- 昭文社 -->
-          <div class="webdesign-item">
-            <img class="webdesign-item-img" src="images/work/heroz.jpg">
-            <div class="webdesign-item-text">
-              <h4 class="webdesign-item-title">HEROZ ASK</h4>
-              <p class="webdesign-item-detail">会社名<br>会社説明入ります</p>
-              <h5 class="webdesign-item-subtitle">DESIGN</h5>
-              <p class="webdesign-item-text">
-                デザイン説明入ります</p>
-              <p class="webdesign-item-period">制作期間</p>
-              <div class="work-link">
-                <p>https://herozask.ai/?_fsi=IzIqaady</p>
-                <a class="link-button" href="https://herozask.ai/?_fsi=IzIqaady"><img src="images/work/button-link.png"></a>
+          <section>
+            <h2 class="page-subtitle">
+              LANDING PAGE
+            </h2>
+            <!-- HEROZ ASK -->
+            <div class="webdesign-item">
+              <figure class="webdesign-item-img">
+                <img src="images/work/heroz.jpg">
+              </figure>
+              <div class="webdesign-item-text">
+                <h3 class="webdesign-item-title">HEROZ ASK</h3>
+                <p class="webdesign-item-detail">会社名<br>会社説明入ります</p>
+                <h4 class="webdesign-item-subtitle">DESIGN</h4>
+                <p class="webdesign-item-explanation">
+                  デザイン説明入ります</p>
+                <p class="webdesign-item-period">制作期間 2023年5月〜8月</p>
+                <div class="work-link">
+                  <p>https://herozask.ai/?_fsi=IzIqaady</p>
+                  <a class="link-button" href="https://herozask.ai/?_fsi=IzIqaady"><img
+                      src="images/work/button-link.png"></a>
+                </div>
               </div>
             </div>
-          </div>
 
-        </section>
+          </section>
+          <!-- contact -->
+          <section id="contact">
+            <a href="webdesign.html">
+              <picture id="contact-img">
+                <source media="(max-width: 767px)" srcset="images/top/sp_top_contact.jpg">
+                <img src="images/top/top_contact.jpg" alt="メールを送る">
+              </picture>
+              <h2 id="contact-txt">CONTACT</h2>
+            </a>
+          </section>
+      </div>
+      <footer>
+        <span id="copyright">&copy;2025 PORTFOLIO OKAMOTO ERIKO</span>
+      </footer>
     </main>
   </body>
+</body>
+</html>

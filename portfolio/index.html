@@ -13,77 +13,47 @@
     rel="stylesheet">
   <!-- reset.css destyle -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css" />
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/top.css">
 </head>
 
 <body>
-  <header id="header">
+  <header>
+    <nav class="header-wrap">
+      <div class="header-logo">
+        <a href="#">
+          <picture>
+            <img loading="eager" src="./images/header/header_logo.png" width="260" height="260" alt="Logo" />
+          </picture>
+        </a>
+      </div>
+      <ul class="header-menu">
+        <li><a href="webdesign.html">WEB DESIGN</a></li>
+        <li><a href="artdirection.html">ART DIRECTION</a></li>
+        <li><a href="graphic.html">GRAPHIC</a></li>
+        <li><a href="cording.html">CODING</a></li>
+        <li><a href="illustration.html">ILLUSTRATION</a></li>
+        <li><a href="fabric.html">FABRIC PATTERN</a></li>
+      </ul>
 
-    <!-- PC用ナビゲーション -->
-    <a id="pc-header-title" href="index.html">PORTFOLIO OKAMOTO ERIKO</a>
-    <nav id="nav-pc">
-      <a href="webdesign.html"><img class="nav-pc-content" id="nav-webdesign" src="images/header/header_webdesign.png"
-          alt="ウェブデザインページへ遷移"></a>
-      <a href="artdirection.html"><img class="nav-pc-content" id="nav-artdirection"
-          src="images/header/header_artdirection.png" alt="アートディレクションページへ遷移"></a>
-      <a href="graphic.html"><img class="nav-pc-content" id="nav-graphic" src="images/header/header_graphic.png"
-          alt="グラフィックページへ遷移"></a>
-      <a href="cording.html"><img class="nav-pc-content" id="nav-coding" src="images/header/header_coding.png"
-          alt="コーディングページへ遷移"></a>
-      <a href="illustration.html"><img class="nav-pc-content" id="nav-illustration"
-          src="images/header/header_illustration.png" alt="イラストページへ遷移"></a>
-      <a href="fabric.html"><img class="nav-pc-content" id="nav-fabric" src="images/header/header_fabric.png"
-          alt="ファブリックデザインページへ遷移"></a>
+      <nav class="header-sp-menu">
+        <input type="checkbox" id="sp-menu-check" />
+        <div class="header-sp-menu-back"></div>
+        <label for="sp-menu-check" class="sp-menu-area">
+          <div class="sp-menu-icon">
+            <img src="images/header/sp-menu.png">
+          </div>
+        </label>
+        <ul class="sp-menu">
+          <li><a href="webdesign.html">WEB DESIGN</a></li>
+          <li><a href="artdirection.html">ART DIRECTION</a></li>
+          <li><a href="graphic.html">GRAPHIC</a></li>
+          <li><a href="cording.html">CODING</a></li>
+          <li><a href="illustration.html">ILLUSTRATION</a></li>
+          <li><a href="fabric.html">FABRIC PATTERN</a></li>
+        </ul>
+      </nav>
     </nav>
-
-    <!-- スマホ用メニューボタン  -->
-    <h4 id="sp-header-title" href="index.html">PORTFOLIO OKAMOTO ERIKO</h4>
-    <img id="menu-sp" src="images/top/button-menu.png" alt="ナビゲーションを開く"
-      onclick="document.getElementById('nav-sp').style.display = 'block'">
-    <!-- スマホ用ナビゲーション  
-    <nav id="nav-sp">
-      <img id="close" src="images/button-close.png" alt="ナビゲーションを閉じる"
-        onclick="document.getElementById('nav-sp').style.display = 'none'">
-      <title id="sp-header-title" href="index.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        PORTFOLIO OKAMOTO ERIKO</title>
-      <a class="sp-menu" href="webdesign.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_webdesign.jpg" alt="ウェブデザインページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>WEB DESIGN</h6>
-      </a>
-      <a class="sp-menu" href="artdirection.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_artdirection.jpg" alt="アートディレクションページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>ART DIRECTION</h6>
-      </a>
-      <a class="sp-menu" href="graphic.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_graphic.jpg" alt="グラフィックページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>GRAPHIC</h6>
-      </a>
-      <a class="sp-menu" href="cording.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_coding.jpg" alt="コーディングページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>CODING</h6>
-      </a>
-      <a class="sp-menu" href="illustration.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_illustration.jpg" alt="イラストページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>ILLUSTRATION</h6>
-      </a>
-      <a class="sp-menu" href="fabric.html" onclick="document.getElementById('nav-sp').style.display = 'none'">
-        <picture>
-          <img src="images/top/sp_top_fabric.jpg" alt="ファブリックデザインページへ遷移">
-        </picture>
-        <h6 class="works-title"><span class="works-dot">● </span>FABRIC</h6>
-      </a>
-    </nav>-->
-
   </header>
 
   <main>
@@ -205,7 +175,7 @@
       </section>
       <!-- contact -->
       <section id="contact">
-        <a href="webdesign.himl">
+        <a href="webdesign.html">
           <picture id="contact-img">
             <source media="(max-width: 767px)" srcset="images/top/sp_top_contact.jpg">
             <img src="images/top/top_contact.jpg" alt="メールを送る">
