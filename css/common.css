@@ -1,0 +1,462 @@
+/* PC・SP共通 */
+
+body {
+  font-family: "Poppins", "Noto Sans JP", sans-serif;
+}
+
+p {
+  font-size: 14px;
+  letter-spacing: 0.1em;
+  line-height: 1.5;
+}
+
+img {
+  max-width: 100%;
+}
+
+/*================
+ PC用のスタイル
+=================*/
+@media screen and (min-width: 768px) {
+
+  /* 横幅設定 */
+  body {
+    max-width: 1920px;
+    min-width: 1116px;
+    margin: 0 auto 0 auto;
+  }
+
+  /* ヘッダー */
+
+  @media (width >=768px) {
+
+    header {
+      height: 80px;
+    }
+
+    header .header-wrap {
+      margin: 0 auto;
+      padding: 0 20px;
+      width: 100%;
+      max-width: 1920px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #333;
+      position: relative;
+    }
+
+    header .header-logo {
+      padding: 0;
+      height: 100%;
+    }
+
+    header .header-logo img {
+      width: auto;
+      height: 24px;
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      translate: 0 -50%;
+    }
+
+    header .header-menu {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      list-style: none;
+    }
+
+    header .header-menu>li {
+      height: 100%;
+      list-style: none;
+    }
+
+    header .header-menu>li>a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      padding: 0 1.0em;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 400;
+      transition: color 0.5s ease-out, opacity 0.5s ease-out;
+    }
+
+    header.scroll .header-menu>li>a {
+      color: var(--fg-color);
+    }
+
+    header .header-menu>li.has-submenu {
+      position: relative;
+    }
+
+    header .header-menu>li.has-submenu>.header-submenu {
+      position: absolute;
+      top: 100%;
+      right: 50%;
+      width: max-content;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      box-shadow: 0 4px 4px #0003;
+      list-style: none;
+      opacity: 0.0;
+      transform-origin: top center;
+      transform: translateX(50%) scale(1.0, 0.0);
+      transition: opacity 0.3s ease-out, transform 0.5s ease-out;
+    }
+
+    header .header-menu>li.has-submenu>.header-submenu>li {
+      width: 100%;
+      list-style: none;
+    }
+
+    header .header-menu>li.has-submenu>.header-submenu>li>a {
+      display: block;
+      margin: 0;
+      padding: 1.0em 2.0em;
+      width: 100%;
+      color: var(--fg-color);
+      font-size: max(14px, calc(18 * min(100vw, 1920px) / 1920));
+      font-weight: 500;
+      text-align: left;
+      transition: color 0.5s ease-out, background 0.5s ease-out;
+    }
+
+    @media (hover: hover) {
+      header .header-menu>li.has-submenu:hover>.header-submenu {
+        opacity: 1.0;
+        transform: translateX(50%) scale(1.0, 1.0);
+        transition: opacity 0.3s ease-out, transform 0.5s ease-out;
+      }
+
+      header .header-menu>li.has-submenu>.header-submenu>li>a:hover {
+        opacity: 1.0;
+        color: #fff;
+        background: var(--fg-color);
+      }
+    }
+
+    header .header-menu>li.has-megamenu {
+      position: relative;
+    }
+
+    header .header-menu>li.has-megamenu>.header-megamenu {
+      position: fixed;
+      top: 80px;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 4px #0003;
+      list-style: none;
+      opacity: 0.0;
+      transform-origin: top center;
+      transform: scale(1.0, 0.0);
+      transition: opacity 0.3s ease-out, transform 0.5s ease-out;
+    }
+
+    header .header-menu>li.has-megamenu>.header-megamenu>li {
+      width: 30%;
+      list-style: none;
+    }
+
+    header .header-menu>li.has-megamenu>.header-megamenu>li>a {
+      display: block;
+      margin: 0;
+      padding: 1.0em 2.0em;
+      width: 100%;
+      color: var(--fg-color);
+      font-size: max(14px, calc(18 * min(100vw, 1920px) / 1920));
+      font-weight: 500;
+      text-align: center;
+      transition: color 0.5s ease-out, background 0.5s ease-out;
+    }
+
+    @media (hover: hover) {
+      header .header-menu>li.has-megamenu:hover>.header-megamenu {
+        opacity: 1.0;
+        transform: scale(1.0, 1.0);
+        transition: opacity 0.3s ease-out, transform 0.5s ease-out;
+      }
+
+      header .header-menu>li.has-megamenu>.header-megamenu>li>a:hover {
+        opacity: 1.0;
+        color: #fff;
+        background: var(--fg-color);
+      }
+    }
+
+    header .header-sp-menu {
+      display: none;
+    }
+
+    /* ナビゲーションのリンクの装飾設定 */
+    .nav-pc-content {
+      height: 19px;
+      margin-right: 30px;
+    }
+
+    /*contact*/
+    #contact {
+      position: relative;
+      text-align: center;
+      object-fit: cover;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    #contact-txt {
+      color: white;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+    }
+
+    /*footer*/
+    footer {
+      background-color: #333333;
+      height: 48px;
+      position: relative;
+    }
+
+    #copyright {
+      color: white;
+      font-size: 12px;
+      margin-left: 3%;
+      position: absolute;
+      top: 50%;
+      translate: 0 -50%;
+    }
+
+  }
+}
+
+@media (width < 768px) {
+  .pc {
+    display: none;
+  }
+
+  .sp {
+    display: block;
+  }
+}
+
+@media (width >=768px) {
+  .pc {
+    display: block;
+  }
+
+  .sp {
+    display: none;
+  }
+}
+
+/*====================
+ スマートフォン用のスタイル
+=====================*/
+@media screen and (max-width: 767px) {
+
+  /* ハンバーガーメニュー */
+
+  header {
+    height: 60px;
+  }
+
+  header .header-wrap {
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+  }
+
+  header .header-logo {
+    padding: 0 0 0 20px;
+    height: 20px;
+  }
+
+  header .header-logo img {
+    width: auto;
+    height: 100%;
+  }
+
+  header .header-menu {
+    display: none;
+  }
+
+  header .header-sp-menu {
+    position: relative;
+    height: 100%;
+    aspect-ratio: 1 / 1;
+  }
+
+  header .header-sp-menu #sp-menu-check {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+  }
+
+  header .header-sp-menu #sp-menu-check~.header-sp-menu-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #333;
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu-area {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu-area>.sp-menu-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: background 0.5s ease-out;
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu-area>.sp-menu-icon::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: transform 0.5s ease-out;
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu-area>.sp-menu-icon::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    transition: transform 0.5s ease-out;
+  }
+
+  header .header-sp-menu #sp-menu-check:checked~.sp-menu-area>.sp-menu-icon {
+    background: transparent;
+  }
+
+  header .header-sp-menu #sp-menu-check:checked~.sp-menu-area>.sp-menu-icon::before {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  header .header-sp-menu #sp-menu-check:checked~.sp-menu-area>.sp-menu-icon::after {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: max-content;
+    padding: 2.0em 4.0em;
+    background: #fffe;
+    list-style: none;
+    transform-origin: top center;
+    transform: scaleY(0.0);
+    transition: transform 0.5s ease-out;
+    z-index: 99;
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu>li {
+    list-style: none;
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu>li>a {
+    display: block;
+    margin: 0;
+    padding: 0.2em 0;
+    font-size: min(16px, 3.6vw);
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu>li>ul.header-submenu,
+  header .header-sp-menu #sp-menu-check~.sp-menu>li>ul.header-megamenu {
+    padding: 0 0 0 1.0em;
+    list-style: none;
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu>li>ul.header-submenu>li,
+  header .header-sp-menu #sp-menu-check~.sp-menu>li>ul.header-megabmenu>li {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+  }
+
+  header .header-sp-menu #sp-menu-check~.sp-menu>li>ul.header-submenu>li>a,
+  header .header-sp-menu #sp-menu-check~.sp-menu>li>ul.header-megamenu>li>a {
+    display: block;
+    margin: 0;
+    padding: 0.2em 0;
+    font-size: min(16px, 3.6vw);
+  }
+
+  header .header-sp-menu #sp-menu-check:checked~.sp-menu {
+    transform: scaleY(1.0);
+  }
+
+  /* PC用ナビゲーション非表示 */
+  #nav-pc {
+    display: none;
+  }
+
+  #pc-header-title {
+    display: none;
+  }
+
+  /*contact*/
+  #contact {
+    position: relative;
+    text-align: center;
+    object-fit: cover;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  #contact-txt {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  /*footer*/
+  footer {
+    background-color: #333333;
+    height: 48px;
+    position: relative;
+  }
+
+  #copyright {
+    color: white;
+    font-size: 12px;
+    margin-left: 3%;
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+  }
+
+}
