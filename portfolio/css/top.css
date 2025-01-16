@@ -133,15 +133,18 @@
     display: flex;
     margin-bottom: 24px;
     width: 500px;
+    align-items: center;
   }
 
   .skill-mark {
     width: 168px;
     height: 168px;
+    margin-right: 5%
   }
 
   .skill-text {
-    width: 354px;
+    width: 40%;
+    text-align: left;
   }
 
   /*about*/
