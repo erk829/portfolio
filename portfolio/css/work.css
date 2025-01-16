@@ -140,9 +140,12 @@
     justify-content: right;
   }
 
+  .link-text {
+    margin-right: 4px;
+  }
+
   .link-button {
     width: 10%;
-    margin-left: 4px;
   }
 
   /*artdirection page*/

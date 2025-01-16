@@ -22,16 +22,16 @@ img {
   /* 横幅設定 */
   body {
     max-width: 1920px;
-    min-width: 1116px;
     margin: 0 auto 0 auto;
   }
 
   /* ヘッダー */
-
-  @media (width >=768px) {
-
+  @media (width >=1000px) {
     header {
-      height: 80px;
+      height: 64px;
+      position: sticky;
+      top: 0;
+      z-index: 99;
     }
 
     header .header-wrap {
@@ -43,8 +43,9 @@ img {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      background-color: #333;
+      background-color: #111c;
       position: relative;
+      z-index: 90;
     }
 
     header .header-logo {
@@ -206,6 +207,9 @@ img {
       margin-right: 30px;
     }
 
+  }
+
+  @media (width >=768px) {
     /*contact*/
     #contact {
       position: relative;
@@ -265,12 +269,13 @@ img {
 /*====================
  スマートフォン用のスタイル
 =====================*/
-@media screen and (max-width: 767px) {
-
+@media screen and (max-width: 1000px) {
   /* ハンバーガーメニュー */
 
   header {
     height: 60px;
+    position: sticky;
+    top: 0;
   }
 
   header .header-wrap {
@@ -280,7 +285,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #333;
+    background-color: #111c;
   }
 
   header .header-logo {
@@ -318,7 +323,7 @@ img {
     left: 0;
     width: 100%;
     height: 100%;
-    background: #333;
+    background: #111c;
   }
 
   header .header-sp-menu #sp-menu-check~.sp-menu-area {
@@ -425,6 +430,10 @@ img {
   #pc-header-title {
     display: none;
   }
+
+}
+
+@media screen and (max-width: 767px) {
 
   /*contact*/
   #contact {
